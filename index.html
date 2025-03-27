@@ -11,17 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="language-selector">
+        <div class="current-language">
+            <span class="language-icon"><i class="fas fa-globe"></i></span>
+            <span class="language-name" data-lang="fr">Français</span>
+            <span class="language-arrow"><i class="fas fa-chevron-down"></i></span>
+        </div>
+        <ul class="language-dropdown">
+            <li data-lang="fr" class="active">Français</li>
+            <li data-lang="en">English</li>
+            <li data-lang="es">Español</li>
+            <li data-lang="de">Deutsch</li>
+            <li data-lang="it">Italiano</li>
+        </ul>
+    </div>
+
     <header>
         <div class="header-content">
-            <h1>Les 10 Meilleurs Restaurants de Montpellier</h1>
-            <p class="subtitle">Découvrez les établissements les mieux notés selon Google Maps</p>
+            <h1 id="page-title">Les 10 Meilleurs Restaurants de Montpellier</h1>
+            <p class="subtitle" id="page-subtitle">Découvrez les établissements les mieux notés selon Google Maps</p>
         </div>
     </header>
 
     <main>
         <div class="container">
             <div class="intro">
-                <p>Montpellier, ville dynamique du sud de la France, est reconnue pour sa richesse gastronomique et la diversité de ses restaurants. Que vous soyez amateur de cuisine traditionnelle, de saveurs exotiques ou de concepts innovants, vous trouverez forcément une adresse qui saura satisfaire vos papilles. Voici notre sélection des 10 meilleurs restaurants de Montpellier, basée sur les notes et avis Google Maps.</p>
+                <p id="intro-text">Montpellier, ville dynamique du sud de la France, est reconnue pour sa richesse gastronomique et la diversité de ses restaurants. Que vous soyez amateur de cuisine traditionnelle, de saveurs exotiques ou de concepts innovants, vous trouverez forcément une adresse qui saura satisfaire vos papilles. Voici notre sélection des 10 meilleurs restaurants de Montpellier, basée sur les notes et avis Google Maps.</p>
             </div>
 
             <div class="restaurants-grid" id="restaurants-container">
@@ -32,8 +47,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Guide Gastronomique de Montpellier</p>
-            <p>Données basées sur les avis Google Maps</p>
+            <p id="copyright">&copy; 2025 Guide Gastronomique de Montpellier</p>
+            <p id="data-source">Données basées sur les avis Google Maps</p>
         </div>
     </footer>
 
