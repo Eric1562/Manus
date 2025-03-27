@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "title": "I 10 Migliori Ristoranti di Montpellier",
+    "lang": "it"
+  },
+  "header": {
+    "title": "I 10 Migliori Ristoranti di Montpellier",
+    "subtitle": "Scopri i locali più votati secondo Google Maps"
+  },
+  "intro": {
+    "text": "Montpellier, città dinamica del sud della Francia, è rinomata per la sua ricchezza gastronomica e la diversità dei suoi ristoranti. Che siate amanti della cucina tradizionale, dei sapori esotici o dei concetti innovativi, troverete sicuramente un posto che soddisferà il vostro palato. Ecco la nostra selezione dei 10 migliori ristoranti di Montpellier, basata sulle valutazioni e recensioni di Google Maps."
+  },
+  "footer": {
+    "copyright": "© 2025 Guida Gastronomica di Montpellier",
+    "data_source": "Dati basati sulle recensioni di Google Maps"
+  },
+  "ui": {
+    "view_on_maps": "Visualizza su Google Maps",
+    "reviews": "recensioni",
+    "specialty": "Specialità"
+  },
+  "restaurants": [
+    {
+      "nom": "Les Casseroles en Folie",
+      "adresse": "5 Place de la Chapelle Neuve, Montpellier",
+      "note": "4.8",
+      "avis": "969",
+      "commentaire": "Un'esperienza culinaria eccezionale! Le galettes sono generose e saporite, servite in un ambiente accogliente su una bella piazza. Il personale è attento e il proprietario molto cordiale. Consiglio particolarmente la galette completa e le crêpes al caramello salato. Un must a Montpellier!",
+      "specialite": "crêpes e galettes bretoni",
+      "image": "https://images.unsplash.com/photo-1519676867240-f03562e64548?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "Le Pat'Daniel's",
+      "adresse": "31 Rue de la Méditerranée, Montpellier",
+      "note": "4.9",
+      "avis": "558",
+      "commentaire": "Questo ristorante merita ampiamente il suo punteggio di 4.9! La cucina è raffinata, i prodotti sono freschi e i piatti sono preparati con passione. L'accoglienza è calorosa e il servizio impeccabile. Ho adorato la loro specialità di pesce, la presentazione è curata e i sapori sono perfetti. Un indirizzo da non perdere.",
+      "specialite": "cucina al whisky Jack Daniel's",
+      "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "Gyraya",
+      "adresse": "22 Pl. du Millénaire, Montpellier",
+      "note": "4.8",
+      "avis": "753",
+      "commentaire": "Una vera scoperta! Questo ristorante offre sapori autentici e piatti generosi. L'atmosfera è amichevole e il servizio attento. Le grigliate sono perfettamente cotte e i contorni deliziosi. Il rapporto qualità-prezzo è eccellente. Tornerò senza esitazione!",
+      "specialite": "grigliate",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "Bonobo",
+      "adresse": "46 Rue Saint-Guilhem, Montpellier",
+      "note": "4.7",
+      "avis": "1177",
+      "commentaire": "Un gioiello nascosto nel cuore di Montpellier! La cucina è creativa e saporita, con prodotti stagionali e locali. L'ambiente è accogliente e l'atmosfera rilassata. Lo chef propone combinazioni di sapori sorprendenti che funzionano meravigliosamente. Il servizio è sia professionale che amichevole. Un indirizzo da scoprire assolutamente.",
+      "specialite": "cucina creativa e locale",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "SMOKY GRILL BURGER",
+      "adresse": "32 Rue du Cardinal de Cabrières, Montpellier",
+      "note": "4.7",
+      "avis": "1121",
+      "commentaire": "I migliori hamburger di Montpellier, senza dubbio! La carne è succosa, il pane morbido e i condimenti generosi. Ho particolarmente apprezzato il loro hamburger signature con cheddar stagionato e la loro salsa fatta in casa. Le patatine fritte sono perfettamente croccanti. Il personale è dinamico e l'atmosfera informale. Un must per gli amanti degli hamburger!",
+      "specialite": "hamburger gourmet",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "La Réserve Rimbaud",
+      "adresse": "820 Av. de Saint-Maur, Montpellier",
+      "note": "4.7",
+      "avis": "1029",
+      "commentaire": "Un'esperienza gastronomica eccezionale! Situato in un ambiente idilliaco in riva all'acqua, questo ristorante offre una cucina raffinata che valorizza i prodotti del mare. Lo chef è talentuoso e creativo. Il servizio è elegante e attento. I dessert sono vere opere d'arte. Perfetto per una cena romantica o un'occasione speciale.",
+      "specialite": "cucina gastronomica e frutti di mare",
+      "image": "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "OLYA CAFÉ",
+      "adresse": "6 Rue Loys, Montpellier",
+      "note": "4.8",
+      "avis": "616",
+      "commentaire": "Un caffè-ristorante che si distingue! L'atmosfera è calorosa e l'arredamento curato. I piatti sono deliziosi e preparati con prodotti freschi. Ho adorato il loro brunch del weekend con uova perfettamente cucinate e pasticceria fatta in casa. Il caffè è eccellente e le bevande originali. Il personale è sorridente e premuroso. Un indirizzo da frequentare regolarmente.",
+      "specialite": "brunch e pasticceria",
+      "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "Umami - La cinquième saveur",
+      "adresse": "15 Rue Jean Jacques Rousseau, Montpellier",
+      "note": "4.8",
+      "avis": "600",
+      "commentaire": "Un'esplosione di sapori in bocca! Questo ristorante offre una cucina fusion inventiva che risveglia le papille gustative. Ogni piatto è un viaggio culinario, con combinazioni di sapori audaci ma sempre equilibrate. La presentazione è curata e l'ambiente elegante. Il servizio è professionale e i consigli sui vini pertinenti. Una bella scoperta per gli amanti della gastronomia creativa.",
+      "specialite": "cucina fusion",
+      "image": "https://images.unsplash.com/photo-1535140728325-a4d3707eee61?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "Le Bistrok Montpellier",
+      "adresse": "47 Rue de l'Aiguillerie, Montpellier",
+      "note": "4.9",
+      "avis": "415",
+      "commentaire": "Un bistrot moderno che offre una cucina di qualità! I piatti sono generosi e saporiti, elaborati con prodotti freschi e di stagione. L'atmosfera è conviviale e il servizio attento. Ho particolarmente apprezzato il loro piatto del giorno e la loro fornita carta dei vini. I dessert fatti in casa sono una delizia. Un eccellente rapporto qualità-prezzo nel centro di Montpellier.",
+      "specialite": "cucina bistrot moderna",
+      "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      "nom": "Blackeys",
+      "adresse": "17 Rue Saint-Firmin, Montpellier",
+      "note": "4.9",
+      "avis": "382",
+      "commentaire": "Una perla culinaria a Montpellier! Questo ristorante intimo offre una cucina creativa e saporita. Lo chef è appassionato e si sente in ogni piatto. Il menu cambia regolarmente secondo i prodotti di stagione. L'accoglienza è calorosa e il servizio personalizzato. I dessert sono divini. Un indirizzo confidenziale che merita di essere conosciuto dagli amanti della buona cucina.",
+      "specialite": "cucina creativa e stagionale",
+      "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    }
+  ]
+}
