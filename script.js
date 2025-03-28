@@ -1,4 +1,107 @@
-/ Fonction pour générer les étoiles de notation
+// Version simplifiée du script.js pour résoudre le problème de chargement des restaurants
+
+// Données des restaurants en français directement intégrées dans le script
+const restaurantsData = [
+  {
+    "nom": "Les Casseroles en Folie",
+    "adresse": "5 Place de la Chapelle Neuve, Montpellier",
+    "note": "4.8",
+    "avis": "969",
+    "commentaire": "Une expérience culinaire exceptionnelle ! Les galettes sont généreuses et savoureuses, servies dans un cadre chaleureux sur une jolie place. Le personnel est attentionné et le patron très sympathique. Je recommande particulièrement la galette complète et les crêpes au caramel beurre salé. Un incontournable à Montpellier !",
+    "specialite": "crêpes et galettes bretonnes",
+    "image": "https://images.unsplash.com/photo-1519676867240-f03562e64548?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "Le Pat'Daniel's",
+    "adresse": "31 Rue de la Méditerranée, Montpellier",
+    "note": "4.9",
+    "avis": "558",
+    "commentaire": "Ce restaurant mérite amplement sa note de 4.9 ! La cuisine est raffinée, les produits sont frais et les plats sont préparés avec passion. L'accueil est chaleureux et le service impeccable. J'ai adoré leur spécialité de poisson, la présentation est soignée et les saveurs sont au rendez-vous. Une adresse à ne pas manquer.",
+    "specialite": "cuisine au whisky Jack Daniel's",
+    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "Gyraya",
+    "adresse": "22 Pl. du Millénaire, Montpellier",
+    "note": "4.8",
+    "avis": "753",
+    "commentaire": "Une véritable découverte ! Ce restaurant propose des saveurs authentiques et des plats généreux. L'ambiance est conviviale et le service attentif. Les grillades sont parfaitement cuites et les accompagnements délicieux. Le rapport qualité-prix est excellent. Je reviendrai sans hésiter !",
+    "specialite": "grillades",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "Bonobo",
+    "adresse": "46 Rue Saint-Guilhem, Montpellier",
+    "note": "4.7",
+    "avis": "1177",
+    "commentaire": "Un petit bijou caché en plein centre de Montpellier ! La cuisine est créative et savoureuse, avec des produits de saison et locaux. Le cadre est cosy et l'ambiance détendue. Le chef propose des associations de saveurs surprenantes qui fonctionnent à merveille. Le service est à la fois professionnel et sympathique. Une adresse à découvrir absolument.",
+    "specialite": "cuisine créative et locale",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "SMOKY GRILL BURGER",
+    "adresse": "32 Rue du Cardinal de Cabrières, Montpellier",
+    "note": "4.7",
+    "avis": "1121",
+    "commentaire": "Les meilleurs burgers de Montpellier, sans aucun doute ! La viande est juteuse, le pain moelleux et les garnitures généreuses. J'ai particulièrement apprécié leur burger signature avec du cheddar affiné et leur sauce maison. Les frites sont croustillantes à souhait. Le personnel est dynamique et l'ambiance décontractée. Un must pour les amateurs de bons burgers !",
+    "specialite": "burgers gourmet",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "La Réserve Rimbaud",
+    "adresse": "820 Av. de Saint-Maur, Montpellier",
+    "note": "4.7",
+    "avis": "1029",
+    "commentaire": "Une expérience gastronomique d'exception ! Situé dans un cadre idyllique au bord de l'eau, ce restaurant propose une cuisine raffinée qui met en valeur les produits de la mer. Le chef est talentueux et créatif. Le service est élégant et attentionné. Les desserts sont de véritables œuvres d'art. Parfait pour un dîner romantique ou une occasion spéciale.",
+    "specialite": "cuisine gastronomique et fruits de mer",
+    "image": "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "OLYA CAFÉ",
+    "adresse": "6 Rue Loys, Montpellier",
+    "note": "4.8",
+    "avis": "616",
+    "commentaire": "Un café-restaurant qui sort du lot ! L'ambiance est chaleureuse et le décor soigné. Les plats sont délicieux et préparés avec des produits frais. J'ai adoré leur brunch du week-end avec des œufs parfaitement cuisinés et des pâtisseries maison. Le café est excellent et les boissons originales. Le personnel est souriant et aux petits soins. Une adresse à fréquenter régulièrement.",
+    "specialite": "brunch et pâtisseries",
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "Umami - La cinquième saveur",
+    "adresse": "15 Rue Jean Jacques Rousseau, Montpellier",
+    "note": "4.8",
+    "avis": "600",
+    "commentaire": "Une explosion de saveurs en bouche ! Ce restaurant propose une cuisine fusion inventive qui éveille les papilles. Chaque plat est un voyage culinaire, avec des associations audacieuses mais toujours équilibrées. La présentation est soignée et le cadre élégant. Le service est professionnel et les conseils sur les vins pertinents. Une belle découverte pour les amateurs de gastronomie créative.",
+    "specialite": "cuisine fusion",
+    "image": "https://images.unsplash.com/photo-1535140728325-a4d3707eee61?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "Le Bistrok Montpellier",
+    "adresse": "47 Rue de l'Aiguillerie, Montpellier",
+    "note": "4.9",
+    "avis": "415",
+    "commentaire": "Un bistrot moderne qui propose une cuisine de qualité ! Les plats sont généreux et savoureux, élaborés avec des produits frais et de saison. L'ambiance est conviviale et le service attentif. J'ai particulièrement apprécié leur plat du jour et leur carte des vins bien fournie. Les desserts maison sont un régal. Un excellent rapport qualité-prix en plein centre de Montpellier.",
+    "specialite": "cuisine bistrot moderne",
+    "image": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  },
+  {
+    "nom": "Blackeys",
+    "adresse": "17 Rue Saint-Firmin, Montpellier",
+    "note": "4.9",
+    "avis": "382",
+    "commentaire": "Une pépite culinaire à Montpellier ! Ce restaurant intimiste propose une cuisine créative et savoureuse. Le chef est passionné et cela se ressent dans chaque assiette. Le menu change régulièrement selon les produits de saison. L'accueil est chaleureux et le service personnalisé. Les desserts sont divins. Une adresse confidentielle qui mérite d'être connue pour les amateurs de bonne cuisine.",
+    "specialite": "cuisine créative et saisonnière",
+    "image": "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+  }
+];
+
+// Textes de l'interface en français
+const uiText = {
+  "view_on_maps": "Voir sur Google Maps",
+  "reviews": "avis",
+  "specialty": "Spécialité"
+};
+
+// Fonction pour générer les étoiles de notation
 function generateStars(rating) {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 >= 0.5;
@@ -30,86 +133,9 @@ function generateGoogleMapsLink(restaurant) {
     return `https://www.google.com/maps/search/?api=1&query=${query}`;
 }
 
-// Variables globales pour les traductions et la langue actuelle
-let translations = {};
-let currentLanguage = 'fr';
-
-// Fonction pour charger les traductions
-async function loadTranslations() {
-    try {
-        // Charger toutes les traductions
-        const languages = ['fr', 'en', 'es', 'de', 'it'];
-        
-        for (const lang of languages) {
-            const response = await fetch(`translations/${lang}.json`);
-            translations[lang] = await response.json();
-        }
-        
-        // Initialiser la langue par défaut (français)
-        setLanguage(currentLanguage);
-    } catch (error) {
-        console.error('Erreur lors du chargement des traductions:', error);
-    }
-}
-
-// Fonction pour changer la langue
-function setLanguage(lang) {
-    if (!translations[lang]) {
-        console.error(`Traduction non disponible pour la langue: ${lang}`);
-        return;
-    }
-    
-    currentLanguage = lang;
-    
-    // Mettre à jour le document HTML
-    document.documentElement.lang = translations[lang].meta.lang;
-    document.title = translations[lang].meta.title;
-    
-    // Mettre à jour l'en-tête
-    document.getElementById('page-title').textContent = translations[lang].header.title;
-    document.getElementById('page-subtitle').textContent = translations[lang].header.subtitle;
-    
-    // Mettre à jour l'introduction
-    document.getElementById('intro-text').textContent = translations[lang].intro.text;
-    
-    // Mettre à jour le pied de page
-    document.getElementById('copyright').textContent = translations[lang].footer.copyright;
-    document.getElementById('data-source').textContent = translations[lang].footer.data_source;
-    
-    // Mettre à jour le sélecteur de langue
-    document.querySelector('.language-name').textContent = getLanguageName(lang);
-    document.querySelector('.language-name').dataset.lang = lang;
-    
-    // Mettre à jour la classe active dans le menu déroulant
-    document.querySelectorAll('.language-dropdown li').forEach(item => {
-        if (item.dataset.lang === lang) {
-            item.classList.add('active');
-        } else {
-            item.classList.remove('active');
-        }
-    });
-    
-    // Recharger les restaurants avec la nouvelle langue
-    loadRestaurants();
-}
-
-// Fonction pour obtenir le nom de la langue
-function getLanguageName(lang) {
-    const languageNames = {
-        'fr': 'Français',
-        'en': 'English',
-        'es': 'Español',
-        'de': 'Deutsch',
-        'it': 'Italiano'
-    };
-    
-    return languageNames[lang] || lang;
-}
-
 // Fonction pour créer une carte de restaurant
 function createRestaurantCard(restaurant) {
     const googleMapsLink = generateGoogleMapsLink(restaurant);
-    const translation = translations[currentLanguage];
     
     return `
         <div class="restaurant-card">
@@ -127,17 +153,17 @@ function createRestaurantCard(restaurant) {
                         <div class="restaurant-rating">
                             <span class="rating-stars">${generateStars(parseFloat(restaurant.note))}</span>
                             <span>${restaurant.note}</span>
-                            <span class="restaurant-reviews">(${restaurant.avis} ${translation.ui.reviews})</span>
+                            <span class="restaurant-reviews">(${restaurant.avis} ${uiText.reviews})</span>
                         </div>
                     </div>
                     <div class="restaurant-specialite">
-                        <i class="fas fa-utensils"></i> <strong>${translation.ui.specialty}:</strong> ${restaurant.specialite}
+                        <i class="fas fa-utensils"></i> <strong>${uiText.specialty}:</strong> ${restaurant.specialite}
                     </div>
                     <div class="restaurant-comment">
                         ${restaurant.commentaire}
                     </div>
                     <div class="restaurant-view-maps">
-                        <i class="fas fa-external-link-alt"></i> ${translation.ui.view_on_maps}
+                        <i class="fas fa-external-link-alt"></i> ${uiText.view_on_maps}
                     </div>
                 </div>
             </a>
@@ -146,15 +172,12 @@ function createRestaurantCard(restaurant) {
 }
 
 // Fonction pour charger les restaurants
-async function loadRestaurants() {
+function loadRestaurants() {
     try {
         const restaurantsContainer = document.getElementById('restaurants-container');
         restaurantsContainer.innerHTML = ''; // Vider le conteneur
         
-        // Utiliser les données de la langue actuelle
-        const restaurants = translations[currentLanguage].restaurants;
-        
-        restaurants.forEach(restaurant => {
+        restaurantsData.forEach(restaurant => {
             restaurantsContainer.innerHTML += createRestaurantCard(restaurant);
         });
     } catch (error) {
@@ -162,7 +185,7 @@ async function loadRestaurants() {
     }
 }
 
-// Initialiser le sélecteur de langue
+// Initialiser le sélecteur de langue (version simplifiée)
 function initLanguageSelector() {
     const languageSelector = document.querySelector('.language-selector');
     const currentLanguageElement = document.querySelector('.current-language');
@@ -179,19 +202,17 @@ function initLanguageSelector() {
         }
     });
     
-    // Changer de langue en cliquant sur un élément du menu
+    // Pour l'instant, le changement de langue est désactivé
     document.querySelectorAll('.language-dropdown li').forEach(item => {
         item.addEventListener('click', () => {
-            const lang = item.dataset.lang;
-            setLanguage(lang);
+            alert("La fonctionnalité multilingue sera bientôt disponible. Pour le moment, le site est uniquement en français.");
             languageSelector.classList.remove('open');
         });
     });
 }
 
-// Charger les traductions et initialiser la page au chargement
-document.addEventListener('DOMContentLoaded', async () => {
-    await loadTranslations();
+// Charger les restaurants et initialiser la page au chargement
+document.addEventListener('DOMContentLoaded', () => {
+    loadRestaurants();
     initLanguageSelector();
 });
-
